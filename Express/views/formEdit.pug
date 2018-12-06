@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title PugTask
+        link(rel ="stylesheet" type="text/css" href="/public/css/form.css")
+    body
+        h1 You can edit a student here
+        form(action="/students/?_method=PUT" method="POST")
+            input(type="text" placeholder = "First and last name of student" name = "name")
+            br
+            br
+            input(type="text" placeholder = "Enter number of the first task" name = "task1")
+            br
+            br
+            input(type="text" placeholder = "Enter number of the second task" name = "task2")
+            br
+            br
+            input(type="text" placeholder = "Enter number of the third task" name = "task3")
+            br
+            br
+            button(type="submit" name = "id" value=id) Edit student

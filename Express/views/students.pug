@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        title PugTask
+        link(rel ="stylesheet" type="text/css" href="/public/css/students.css")
+    body
+        table
+            tr
+                th id
+                th Name
+                th Task1
+                th Task2
+                th Task3
+                th
+                th
+            each element in elements
+                tr
+                    td=element.id
+                    td=element.name
+                    td=element.taskOne
+                    td=element.taskTwo
+                    td=element.taskThree
+                    td
+                      form(action="/students/?_method=DELETE" method="POST")
+                          button(name = "id" value=element.id) Delete
+                    td      
+                      form(action="/students/edit" method="POST")
+                          button(name = "id" value=element.id) Edit        
+        br
+        br                  
+        form(action="/students/add" method="post")                  
+            button Add student

@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        title PugTask
+        link(rel ="stylesheet" type="text/css" href="/public/css/students.css") 
+    body
+        table
+            tr
+                th Name
+                th Task1
+                th Task2
+                th Task3
+            each element in elements
+                tr
+                    td=element.name
+                    td=element.taskOne
+                    td=element.taskTwo
+                    td=element.taskThree
